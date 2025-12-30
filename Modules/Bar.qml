@@ -30,7 +30,7 @@ Scope {
         color: primaryBg
 
 
-        Column {
+        ColumnLayout {
             id: layout
             anchors.fill: parent
 
@@ -62,9 +62,7 @@ Scope {
             ClockWidget {}
             
             Rectangle {
-
-                anchors.horizontalCenter: parent.horizontalCenter
-
+                Layout.alignment: Qt.AlignHCenter
 
                 color: secondaryBg
 
@@ -104,12 +102,16 @@ Scope {
                         }
                     }
                 }
-                width: wsList.implicitWidth + (padding * 2)   // 2x margins
-                height: wsList.implicitHeight + (padding * 2)
+                implicitWidth: wsList.implicitWidth + (padding * 2)   // 2x margins
+                implicitHeight: wsList.implicitHeight + (padding * 2)
                 radius: 100
             }
 
             BatteryCircle {}
+
+            Item {
+                Layout.fillHeight: true
+            }
         }
     }
 }

@@ -12,6 +12,3 @@ import "./Modules/components"
 Scope {
    Bar {}
 }
-
-
-
