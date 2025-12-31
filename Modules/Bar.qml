@@ -15,8 +15,8 @@ Scope {
     property var background3: "#444444"
 
     property var disabled: "#94B4C1"
-    property var active: "#94B4C1"
-    property var focused: "#EAE0CF"
+    property var active: '#EAE0CF'
+    property var focused: '#FFD166'
 
     PanelWindow {
         id: bar
@@ -63,8 +63,8 @@ Scope {
 
             ClockWidget {}
             
-            // Workspaces {}
-            OldWorkspaces {}
+            Workspaces {}
+            // OldWorkspaces {}
 
             BatteryCircle {}
 
