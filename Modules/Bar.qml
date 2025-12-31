@@ -112,6 +112,50 @@ Scope {
             left: true
             top: true
         }
+
+        RectangularShadow {
+            width: 2
+            height: overlay.height
+            offset.x: 0
+            offset.y: 0
+            radius: 0
+            blur: 30
+            spread: 10
+            color: "#0c0c0c"
+        }
+
+        RectangularShadow {
+            width: 2
+            height: overlay.height
+            offset.x: overlay.width
+            offset.y: 0
+            radius: 0
+            blur: 30
+            spread: 10
+            color: "#0c0c0c"
+        }
+
+        RectangularShadow {
+            width: overlay.width
+            height: 2
+            offset.x: 0
+            offset.y: 0
+            radius: 0
+            blur: 30
+            spread: 10
+            color: "#0c0c0c"
+        }
+
+         RectangularShadow {
+            width: overlay.width
+            height: 2
+            offset.x: 0
+            offset.y: overlay.height
+            radius: 0
+            blur: 30
+            spread: 10
+            color: "#0c0c0c"
+        }
         
         CornerArc {
             corner: "topLeft"
