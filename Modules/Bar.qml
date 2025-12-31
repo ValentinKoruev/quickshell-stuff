@@ -82,7 +82,7 @@ Scope {
             right: true
         }
 
-        implicitWidth: 20
+        implicitWidth: 10
         
         color: primaryBg
     }
@@ -94,9 +94,18 @@ Scope {
             left: true
         }
 
-        implicitHeight: 20
+        implicitHeight: 30
         
         color: primaryBg
+
+        Text {
+            text: WindowTracker.windowTitle
+            anchors.centerIn: parent
+            color: focused
+            font.bold: true
+            font.family: "FiraCode Nerd Font", "monospace"
+            font.pixelSize: 12
+        }
     }
 
     PanelWindow {
@@ -106,7 +115,7 @@ Scope {
             left: true
         }
 
-        implicitHeight: 20
+        implicitHeight: 10
         
         color: primaryBg
     }
