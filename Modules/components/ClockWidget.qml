@@ -19,8 +19,8 @@ Rectangle {
             Text {
                 text: modelData
                 font.pixelSize: 14
-                font.bold: false
-                font.family: "FiraCode Nerd Font, monospace"
+                font.bold: true
+                font.family: "FiraCode Nerd Font", "monospace"
                 color: focused
                 anchors.horizontalCenter: parent.horizontalCenter
             }

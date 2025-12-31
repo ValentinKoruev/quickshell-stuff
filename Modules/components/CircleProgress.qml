@@ -3,7 +3,6 @@ import QtQuick
 Item {
     id: root
     property int percent: 0
-    // property real 
     property color progressColor: "#4CAF50"
     property color backgroundColor: "#333"
     property real lineWidth: 5
@@ -69,19 +68,14 @@ Item {
     }
 
     Loader {
-        // anchors.centerIn: parent
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+        anchors.centerIn: parent
         active: showText
         sourceComponent: Text {
-            // anchors.centerIn: parent
             text: percent
-
-
             color: root.textColor
             font.pixelSize: root.textSize
             font.bold: root.textBold
-            font.family: "FiraCode Nerd Font, monospace"
+            font.family: "FiraCode Nerd Font", 'monospace'
             // for offset if need be
             // x: parent.width / 2 - width / 2 - 1  
             
