@@ -4,40 +4,49 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 
-Scope {
-    property var dayOfWeek: "Mon"
-    property var month: "Jan"
+Singleton {
     property var day: "1"
+    property var dayName: "Monday"
+    property var dayShortName: "Mon"
+
+    property var month: "1"
+    property var monthName: "January"
+    property var monthShortName: "Jan"
+
+    property var year: "1967"
+
     property var hour: "00"
     property var minutes: "00"
     property var seconds: "00"
     property var timeOfDay: "AM"
-    property var year: "1967"
 
     Process {
         id: dateProc
-        command: ["date"]
+        command: ['date','+"%d %m %Y %H %M %S %p %a %A %b %B"']
 
         running: true
 
         stdout: SplitParser {
             onRead: data => {
                 // Ex. Output: 
-                // Mon Dec 29 02:43:12 AM EET 2025
+                // 01 01 2026 03 19 16 AM Thu Thursday Jan January
                 let p = data.split(" ");
+
+                day = p[0]
+                month = p[1]
+                year = p[2]
+
+                hour = p[3]
+                minutes = p[4]
+                seconds = p[5]
+
+                timeOfDay = p[6]
                 
-                dayOfWeek = p[0];
-                month = p[1];
-                day = p[2];
+                dayName = p[7]
+                dayNameShort = p[8]
 
-                let time = p[3].split(":");
-                hour = time[0]
-                minutes = time[1]
-                seconds = time[2]
-
-                timeOfDay = p[4]
-
-                year = p[6]
+                monthName = p[9]
+                monthShortName = p[10]
             }
         }
     }
