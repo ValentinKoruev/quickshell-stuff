@@ -32,13 +32,13 @@ Rectangle {
 
             Rectangle {
                 id: wsRect
-                property var workspace: wsList.workspaces.find(w => {
-                    const wsOffset = wsList.focusedWorkspace.id > 5 ? 5 : 0
-
-                    return w.id === index + 1 + wsOffset
-                })
+                
+                property var wsOffset: wsList.focusedWorkspace.id > 5 ? 5 : 0
+                property var workspace: wsList.workspaces.find(w => w.id === index + 1 + wsOffset)
+                
                 property bool isFocused: workspace?.id === wsList.focusedWorkspace.id
                 property bool isActive: workspace ?? false
+
                 width: rect.expandedCellSize
                 height: rect.expandedCellSize
                 color: "transparent"
@@ -74,6 +74,8 @@ Rectangle {
                     MouseArea {
                         anchors.fill: parent
                         hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: Hyprland.dispatch("workspace " + (index + 1 + wsOffset))
                     }
                 }
             }
