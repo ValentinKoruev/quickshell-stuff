@@ -1,7 +1,8 @@
 import QtQuick
 import QtQuick.Layouts
 
-import "./"
+import "../components"
+import "../services"
 
 Column {
     Layout.alignment: Qt.AlignHCenter

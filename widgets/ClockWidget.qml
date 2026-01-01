@@ -2,7 +2,7 @@ import Quickshell
 import QtQuick
 import QtQuick.Layouts
 
-import "./"
+import "../services"
 
 Rectangle {
     width: parent.width

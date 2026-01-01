@@ -1,62 +1,10 @@
 import Quickshell
-import Quickshell.Io
-import Quickshell.Hyprland
-import QtQuick
-import QtQuick.Layouts
 import QtQuick.Effects
-import Quickshell.Services.UPower
 
-import "./components"
+import "../components"
+import "../widgets"
 
 Scope {
-    id: barScope
-    property var primaryBg: "#2F2F2F";
-    property var secondaryBg: "#3A3A3A"
-    property var background3: "#444444"
-
-    property var disabled: "#94B4C1"
-    property var active: '#EAE0CF'
-    property var focused: '#FFD166'
-
-    PanelWindow {
-        id: bar
-        anchors {
-            top: true
-            bottom: true
-            left: true
-        }
-
-        implicitWidth: 50
-        
-        color: primaryBg
-
-        // BarDebugLines {}
-
-        ColumnLayout {
-            id: layout
-            anchors.fill: parent
-
-            anchors.topMargin: 10
-            anchors.bottomMargin: 10
-
-            spacing: 10
-
-            LogoWidget {}
-
-            ClockWidget {}
-            
-            Workspaces {}
-            // OldWorkspaces {}
-
-            BatteryCircle {}
-
-            Item {
-                Layout.fillHeight: true
-            }
-
-        }
-    }
-
     PanelWindow {
         anchors {
             top: true
@@ -80,14 +28,7 @@ Scope {
         
         color: primaryBg
 
-        Text {
-            text: WindowTracker.windowTitle
-            anchors.centerIn: parent
-            color: focused
-            font.bold: true
-            font.family: "FiraCode Nerd Font", "monospace"
-            font.pixelSize: 12
-        }
+        WindowTitleWidget { }
     }
 
     PanelWindow {

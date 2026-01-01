@@ -14,7 +14,7 @@ Rectangle {
         text: "󰣇"
         font.family: "JetBrainsMono Nerd Font"
         font.pixelSize: 22
-        color: barScope.focused 
+        color: focused 
         Layout.alignment: Qt.AlignHCenter
     }
 

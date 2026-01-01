@@ -3,7 +3,7 @@ import QtQuick
 Canvas {
     id: cornerArc
     property color color: "steelblue"
-    property int radius: 40      // radius of the arc
+    property int radius: 40 
     property string corner: "topLeft" // "topLeft", "topRight", "bottomLeft", "bottomRight"
 
     width: radius

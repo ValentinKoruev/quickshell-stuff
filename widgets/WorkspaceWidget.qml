@@ -48,9 +48,9 @@ Rectangle {
                     width: isFocused ? rect.expandedCellSize : rect.inactiveCellSize
                     height: isFocused ? rect.expandedCellSize : rect.inactiveCellSize
                     color: {
-                        if(isFocused) return barScope.focused
+                        if(isFocused) return focused
 
-                        if(isActive) return barScope.active
+                        if(isActive) return active
 
                         return '#2e2929'
                     }
