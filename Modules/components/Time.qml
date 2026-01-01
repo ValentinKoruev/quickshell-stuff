@@ -42,11 +42,11 @@ Singleton {
 
                 timeOfDay = p[6]
                 
-                dayName = p[7]
-                dayShortName = p[8]
+                dayShortName = p[7]
+                dayName = p[8]
 
-                monthName = p[9]
-                monthShortName = p[10]
+                monthShortName = p[9]
+                monthName = p[10]
             }
         }
     }
