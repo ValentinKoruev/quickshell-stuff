@@ -12,10 +12,8 @@ Rectangle {
         anchors.fill: parent
         spacing: 0
 
-        property var formatedHour: Time.timeOfDay === "AM" ? Time.hour : (parseInt(Time.hour) + 12)
-
         Repeater {
-            model: [parent.formatedHour, Time.minutes]
+            model: [Time.hour, Time.minutes]
             Text {
                 text: modelData
                 font.pixelSize: 14
